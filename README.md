@@ -1,4 +1,4 @@
-# Building-a-Phylogenetic-Tree-from-Whole-Genome-Comparisons
+# Building a phylogenetic tree from whole bacterial genomes using Genome2Tree
 
 This tutorial shows an easiy way to reconstruct a phylogenetic tree from whole genome bacterial genomes. The workflow identifies orthologous single-copy genes shared between several bacteria genomes and constructs an aligned and concated supermatrix from the sequences which is ready to use for phylogenetic reconstruction. All of these steps are merged into one phyton based pipeline which can easily be used to calculate a concated gene supermatrix, which requires only **.fasta or .faa genome sequences** from the user in order to compute. 
 
@@ -26,15 +26,15 @@ After saving the genomes in a specific folder, you need to create an environment
 We will create a Miniconda environment in which all analyses will be performed to avoid conflicts with existing software. The environment needs to be activated before use. Below is the code to set up and activate the Miniconda environment:
 
 ```
-conda create -n supermatrix_pipeline python=3.9
-conda activate supermatrix_pipeline
+conda create -n Genome2Tree python=3.9
+conda activate Genome2Tree
 conda install -c bioconda orthofinder mafft clipkit phykit
 pip install biopython
 ```
 ## Running the pipeline
-After setting up and activating your miniconda environment you need to **download the python script** (**!!Important!!** ) found in this repository called **supermatrix.py**. This script should be saved in a apropriate folder or can also be used directly from its location in your Downloads folder. The script allows the user to specify the **input folder**, where all of the input genomes are stored, and the **output folder** where all results should be saved into. Furthermore the user can specify how many CPU cores are used, which will have influence on the analysis time. With 8 cores expect for ~10 genomes around 10-20 min to complete, while 100 genomes will take several hours. 
+After setting up and activating your miniconda environment you need to **download the python script** (**!!Important!!** ) found in this repository called **Genome2Tree.py**. This script should be saved in a apropriate folder or can also be used directly from its location in your Downloads folder. The script allows the user to specify the **input folder**, where all of the input genomes are stored, and the **output folder** where all results should be saved into. Furthermore the user can specify how many CPU cores are used, which will have influence on the analysis time. With 8 cores expect for ~10 genomes around 10-20 min to complete, while 100 genomes will take several hours. 
 ```
-python /path/to/pythonfile/supermatrix.py -i /path/to/input_fastas -o /path/to/output -t 8
+python /path/to/pythonfile/Genome2Tree.py -i /path/to/input_fastas -o /path/to/output -t 8
 ```
 After the analysis ended you can deactivate your conda environment using 
 **conda deactivate**
