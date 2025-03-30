@@ -8,6 +8,15 @@ The pipeline bases on the following steps/programs:
 3. **Trimming** using [**ClipKIT**](https://github.com/JLSteenwyk/ClipKIT)
 4. **Concatenation** using [**PhyKIT**](https://github.com/JLSteenwyk/PhyKIT)
 
+```mermaid
+graph TD;
+  A[Input: Genomic FASTA or FAAFiles] -->|Ortholog Detection| B[OrthoFinder];
+  B -->|Multiple Sequence Alignment| C[MAFFT];
+  C -->|Alignment Trimming| D[ClipKIT];
+  D -->|Concatenation| E[PhyKIT];
+  E -->|Output: Supermatrix| F[Aligned Single-Copy Ortholog gene sequences];
+```
+
 The pipeline can process nucleotide and amino acid sequences, and bases on the identification of orthologous single-copy genes or gene products shared between submitted .fasta or .faa files. By this usually several hundred or thousand of different shared genes are identified in the submitted genomes. These build the fundation for a robust reconstruction of the phylogenetic relationships of the investigated genomes. While the princple and the underlying programms are well known, the construction of the phylogenetic trees usually requires labour intense reformatting of the outputs from these single programms. I constructed and easy-to-use pipeline which allows the use to construct a concated supermatrix from their input .fasta or .faa files, which can further used for constructed a phylogenetic tree using standard programms like IQ-Tree2
 
 # System Requirements and Initial Setup
