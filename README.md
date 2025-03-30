@@ -1,6 +1,8 @@
 # Building-a-Phylogenetic-Tree-from-Whole-Genome-Comparisons
 
-This tutorial explains how to identify orthologous single-copy genes shared between several bacteria genomes and how to construct a aligned and concated supermatrix from the sequences ready to use for phylogenetic reconstruction. All of these steps were merged into one phyton based pipeline which can be used for an easiy production of concated gene supermatrix. The pipeline bases on the following steps/programs:
+This tutorial shows an easiy way to reconstruct a phylogenetic tree from whole genome bacterial genomes. The workflow identifies orthologous single-copy genes shared between several bacteria genomes and constructs an aligned and concated supermatrix from the sequences which is ready to use for phylogenetic reconstruction. All of these steps are merged into one phyton based pipeline which can easily be used to calculate a concated gene supermatrix, which requires only **.fasta or .faa genome sequences** from the user in order to compute. 
+
+The pipeline bases on the following steps/programs:
 1. **Identification of orthologs** using [**Orthofinder**](https://github.com/davidemms/OrthoFinder)
 2. **Alignment** using [**MAFFT**](https://github.com/GSLBiotech/mafft)
 3. **Trimming** using [**ClipKIT**](https://github.com/JLSteenwyk/ClipKIT)
