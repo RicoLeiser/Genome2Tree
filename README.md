@@ -1,4 +1,4 @@
-# Building a phylogenetic tree from whole bacterial genomes using Genome2Tree
+# Building a phylogenetic tree from whole bacterial genomes with Genome2Tree
 
 This tutorial shows an easiy way to reconstruct a phylogenetic tree from whole genome bacterial genomes. The workflow identifies orthologous single-copy genes shared between several bacteria genomes and constructs an aligned and concated supermatrix from the sequences which is ready to use for phylogenetic reconstruction. All of these steps are merged into one phyton based pipeline which can easily be used to calculate a concated gene supermatrix, which requires only **.fasta or .faa genome sequences** from the user in order to compute. 
 
