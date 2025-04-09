@@ -11,7 +11,7 @@ The pipeline bases on the following steps/programs:
 
 ```mermaid
 graph TD;
-  A[Input: Genomic FASTA or FAAFiles] -->|Ortholog Detection| B[OrthoFinder];
+  A[Input: Genomic .FASTA or .FA Files] -->|Ortholog Detection| B[OrthoFinder];
   B -->|Multiple Sequence Alignment| C[MAFFT];
   C -->|Alignment Trimming| D[ClipKIT];
   D -->|Concatenation| E[PhyKIT];
