@@ -48,8 +48,8 @@ genome2tree.py --help
 ```
 this should prompt the output,
 ```
-Genome2Tree.py --help
-usage: Genome2Tree.py [-h] -i INPUT -o OUTPUT [-p PREFIX] [-t THREADS] [--dna] [--force]
+genome2tree.py --help
+usage: genome2tree.py [-h] -i INPUT -o OUTPUT [-p PREFIX] [-t THREADS] [--dna] [--force]
 
 Pipeline to create a supermatrix from FASTA files
 
