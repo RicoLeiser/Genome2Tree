@@ -43,7 +43,7 @@ conda install -c bioconda genome2tree
 ## Running the pipeline
 After setting up and activating your miniconda environment (you can deactivate the environment anytime using **conda deactivate**) you can run a test to confirm that the pipeline is correctly set-up
 ```
-Genome2Tree.py --help
+genome2tree.py --help
 
 ```
 this should prompt the output,
